@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#050816"/>
+      <stop offset="0.56" stop-color="#08112a"/>
+      <stop offset="1" stop-color="#160b2d"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" x2="1">
+      <stop stop-color="#67e8f9"/>
+      <stop offset="0.52" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.24" stroke="#67e8f9">
+    <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M0 400H1200M0 480H1200M0 560H1200"/>
+    <path d="M80 0V630M160 0V630M240 0V630M320 0V630M400 0V630M480 0V630M560 0V630M640 0V630M720 0V630M800 0V630M880 0V630M960 0V630M1040 0V630M1120 0V630"/>
+  </g>
+  <circle cx="1040" cy="120" r="230" fill="#7c3aed" opacity="0.22"/>
+  <circle cx="150" cy="520" r="260" fill="#22d3ee" opacity="0.18"/>
+  <text x="90" y="245" font-family="Inter,Arial,sans-serif" font-size="72" font-weight="900" fill="#ffffff">Bimun Acharya</text>
+  <text x="92" y="330" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="800" fill="url(#text)">Cloud | Cybersecurity | Full Stack</text>
+  <text x="94" y="407" font-family="JetBrains Mono,Consolas,monospace" font-size="24" fill="#94a3b8">IT graduate | cloud | cybersecurity | web projects</text>
+  <rect x="90" y="475" width="420" height="56" rx="8" fill="none" stroke="#67e8f9" opacity="0.7"/>
+  <text x="120" y="512" font-family="JetBrains Mono,Consolas,monospace" font-size="20" fill="#67e8f9">portfolio online</text>
+</svg>

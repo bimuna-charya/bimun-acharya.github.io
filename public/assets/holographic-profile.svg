@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1040" viewBox="0 0 900 1040" role="img" aria-label="Holographic profile visual">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#071025"/>
+      <stop offset="0.52" stop-color="#0d1637"/>
+      <stop offset="1" stop-color="#211044"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="0.55" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="1040" rx="28" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#67e8f9">
+    <path d="M0 88H900M0 176H900M0 264H900M0 352H900M0 440H900M0 528H900M0 616H900M0 704H900M0 792H900M0 880H900M0 968H900"/>
+    <path d="M88 0V1040M176 0V1040M264 0V1040M352 0V1040M440 0V1040M528 0V1040M616 0V1040M704 0V1040M792 0V1040"/>
+  </g>
+  <path d="M120 210C170 110 292 92 420 116C548 140 676 106 742 206C806 304 744 410 762 528C782 658 872 750 800 858C728 966 584 934 454 940C322 946 190 986 112 882C34 778 112 656 118 524C124 404 68 312 120 210Z" fill="#22d3ee" opacity="0.13"/>
+  <path d="M180 246C256 162 394 150 514 198C632 246 704 354 704 488C704 620 628 748 500 790C370 832 220 784 158 666C96 548 104 330 180 246Z" fill="#a855f7" opacity="0.14"/>
+  <g filter="url(#glow)">
+    <path d="M450 186C537 186 608 257 608 344C608 431 537 502 450 502C363 502 292 431 292 344C292 257 363 186 450 186Z" fill="#101936" stroke="url(#edge)" stroke-width="5"/>
+    <path d="M196 866C214 704 326 590 450 590C574 590 686 704 704 866H196Z" fill="#101936" stroke="url(#edge)" stroke-width="5"/>
+  </g>
+  <path d="M352 346C382 308 422 288 454 288C502 288 548 322 560 370" fill="none" stroke="#67e8f9" stroke-width="9" stroke-linecap="round" opacity="0.8"/>
+  <path d="M346 396C408 442 492 442 554 396" fill="none" stroke="#c084fc" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <g font-family="JetBrains Mono,Consolas,monospace" font-size="24" fill="#bae6fd" opacity="0.9">
+    <text x="72" y="96">cloud.cyber.dev</text>
+    <text x="652" y="950">BA::NEPAL</text>
+    <text x="64" y="932">status: online</text>
+  </g>
+  <g fill="none" stroke="url(#edge)" stroke-width="3" opacity="0.8">
+    <rect x="62" y="58" width="776" height="924" rx="22"/>
+    <path d="M88 142H304M596 142H812M88 898H296M604 898H812"/>
+  </g>
+</svg>

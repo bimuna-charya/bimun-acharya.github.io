@@ -1,0 +1,17 @@
+{
+  "name": "Bimun Acharya Portfolio",
+  "short_name": "Bimun",
+  "description": "Portfolio of Bimun Acharya, IT graduate from Nepal focused on cloud, cybersecurity, web development, databases, and practical IT support.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64 128x128 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

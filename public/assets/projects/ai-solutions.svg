@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="AI Solutions website preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#050816"/>
+      <stop offset="0.52" stop-color="#111b3d"/>
+      <stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <path d="M160 410C226 304 336 250 490 248C644 246 734 184 818 88" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.25"/>
+  <path d="M110 518C236 382 368 330 506 352C644 374 762 310 862 178" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.28"/>
+  <rect x="92" y="78" width="776" height="444" rx="8" fill="#071025" stroke="#334155"/>
+  <rect x="132" y="118" width="696" height="56" rx="8" fill="#0f1b3d"/>
+  <rect x="132" y="220" width="330" height="48" rx="8" fill="#0f1b3d"/>
+  <rect x="132" y="292" width="260" height="22" rx="8" fill="#1e293b"/>
+  <rect x="132" y="336" width="310" height="22" rx="8" fill="#1e293b"/>
+  <rect x="132" y="402" width="158" height="50" rx="8" fill="url(#line)"/>
+  <g transform="translate(550 220)">
+    <circle cx="104" cy="104" r="98" fill="none" stroke="url(#line)" stroke-width="4"/>
+    <circle cx="104" cy="104" r="42" fill="#0f1b3d" stroke="#67e8f9" stroke-width="4"/>
+    <path d="M104 4V62M104 146V204M4 104H62M146 104H204M31 31L72 72M136 136L177 177M177 31L136 72M72 136L31 177" stroke="#c084fc" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="132" y="558" fill="#e0f2fe" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900">AI Solutions Website</text>
+</svg>

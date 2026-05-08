@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="MealMate project preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#061226"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <g opacity="0.16" stroke="#67e8f9">
+    <path d="M0 80H960M0 160H960M0 240H960M0 320H960M0 400H960M0 480H960"/>
+    <path d="M80 0V600M160 0V600M240 0V600M320 0V600M400 0V600M480 0V600M560 0V600M640 0V600M720 0V600M800 0V600M880 0V600"/>
+  </g>
+  <rect x="112" y="76" width="736" height="448" rx="8" fill="#08112a" stroke="#38bdf8" opacity="0.95"/>
+  <rect x="150" y="120" width="210" height="360" rx="8" fill="#0f1b3d" stroke="#334155"/>
+  <rect x="398" y="120" width="410" height="76" rx="8" fill="#0f1b3d"/>
+  <rect x="398" y="224" width="184" height="118" rx="8" fill="#0f1b3d"/>
+  <rect x="624" y="224" width="184" height="118" rx="8" fill="#0f1b3d"/>
+  <rect x="398" y="372" width="410" height="108" rx="8" fill="#0f1b3d"/>
+  <path d="M190 206H320M190 254H302M190 302H326M190 350H292" stroke="#67e8f9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M438 158H616M438 272H522M664 272H756M438 426H698" stroke="url(#accent)" stroke-width="14" stroke-linecap="round"/>
+  <text x="150" y="558" fill="#e0f2fe" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900">MealMate App</text>
+</svg>

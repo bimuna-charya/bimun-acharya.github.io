@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Secure Registration System preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#061226"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <g opacity="0.12" stroke="#67e8f9">
+    <path d="M0 100H960M0 200H960M0 300H960M0 400H960M0 500H960"/>
+    <path d="M120 0V600M240 0V600M360 0V600M480 0V600M600 0V600M720 0V600M840 0V600"/>
+  </g>
+  <rect x="266" y="68" width="428" height="464" rx="8" fill="#08112a" stroke="#334155"/>
+  <path d="M480 128C532 128 574 170 574 222V260H386V222C386 170 428 128 480 128Z" fill="none" stroke="url(#accent)" stroke-width="14"/>
+  <rect x="342" y="244" width="276" height="186" rx="8" fill="#0f1b3d" stroke="#38bdf8"/>
+  <circle cx="480" cy="328" r="34" fill="#22d3ee" opacity="0.22"/>
+  <path d="M480 326V382" stroke="#e0f2fe" stroke-width="14" stroke-linecap="round"/>
+  <path d="M370 464H590" stroke="#67e8f9" stroke-width="12" stroke-linecap="round"/>
+  <path d="M394 492H566" stroke="#c084fc" stroke-width="10" stroke-linecap="round"/>
+  <text x="96" y="558" fill="#e0f2fe" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900">Secure Registration System</text>
+</svg>

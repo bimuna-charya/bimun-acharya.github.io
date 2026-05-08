@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-label="Oracle and MongoDB database project preview">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#070b1d"/>
+      <stop offset="0.52" stop-color="#0f1b3d"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <g opacity="0.13" stroke="#67e8f9">
+    <path d="M0 75H960M0 150H960M0 225H960M0 300H960M0 375H960M0 450H960M0 525H960"/>
+    <path d="M96 0V600M192 0V600M288 0V600M384 0V600M480 0V600M576 0V600M672 0V600M768 0V600M864 0V600"/>
+  </g>
+  <g transform="translate(136 118)">
+    <ellipse cx="168" cy="44" rx="168" ry="44" fill="#0f1b3d" stroke="#38bdf8" stroke-width="4"/>
+    <path d="M0 44V220C0 244 75 264 168 264C261 264 336 244 336 220V44" fill="#0f1b3d" stroke="#38bdf8" stroke-width="4"/>
+    <ellipse cx="168" cy="220" rx="168" ry="44" fill="#0f1b3d" stroke="#38bdf8" stroke-width="4"/>
+    <text x="168" y="150" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono,Consolas,monospace" font-size="36" font-weight="700">SQL</text>
+  </g>
+  <g transform="translate(508 118)">
+    <ellipse cx="168" cy="44" rx="168" ry="44" fill="#0f1b3d" stroke="#c084fc" stroke-width="4"/>
+    <path d="M0 44V220C0 244 75 264 168 264C261 264 336 244 336 220V44" fill="#0f1b3d" stroke="#c084fc" stroke-width="4"/>
+    <ellipse cx="168" cy="220" rx="168" ry="44" fill="#0f1b3d" stroke="#c084fc" stroke-width="4"/>
+    <text x="168" y="150" text-anchor="middle" fill="#e0f2fe" font-family="JetBrains Mono,Consolas,monospace" font-size="36" font-weight="700">NoSQL</text>
+  </g>
+  <path d="M418 250H542" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M520 226L552 250L520 274" fill="none" stroke="#c084fc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="104" y="558" fill="#e0f2fe" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="900">Oracle + MongoDB Database Project</text>
+</svg>

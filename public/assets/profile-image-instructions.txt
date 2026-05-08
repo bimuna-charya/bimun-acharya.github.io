@@ -1,0 +1,5 @@
+Save the uploaded Tserko Ri profile photo as:
+
+public/assets/profile-bimun.jpg
+
+The Hero profile section is already wired to use this file.

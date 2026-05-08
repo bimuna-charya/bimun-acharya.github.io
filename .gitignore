@@ -1,0 +1,7 @@
+node_modules
+dist
+.edge-profile
+.env
+.env.local
+.DS_Store
+*.log
