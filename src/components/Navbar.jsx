@@ -1,24 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { navItems } from '../data/portfolio';
+import { cvUrl, navItems, profileImage, sidebarImage, socials } from '../data/portfolio';
 import { Icons } from '../utils/icons.jsx';
 
 const Bars = Icons.bars;
 const Times = Icons.times;
+const Download = Icons.download;
+const avatarSources = [
+  sidebarImage,
+  '/assets/profile-graduation.jpeg',
+  '/assets/profile-graduation.png',
+  '/assets/profile-graduation.webp',
+  profileImage,
+  '/assets/profile-bimun.jpeg',
+  '/assets/profile-bimun.png',
+  '/assets/holographic-profile.svg',
+];
+
+const navIcons = {
+  home: Icons.rocket,
+  about: Icons.graduation,
+  skills: Icons.tools,
+  projects: Icons.code,
+  journey: Icons.network,
+  certifications: Icons.database,
+  contact: Icons.email,
+};
 
 export default function Navbar({ activeSection }) {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      setScrolled(window.scrollY > 24);
-    }
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [avatarIndex, setAvatarIndex] = useState(0);
 
   function handleNavClick(id) {
     setOpen(false);
@@ -26,81 +37,85 @@ export default function Navbar({ activeSection }) {
   }
 
   return (
-    <motion.header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'border-b border-white/10 bg-ink/72 shadow-card backdrop-blur-2xl' : 'bg-transparent'
-      }`}
-      initial={{ y: -90, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, ease: 'easeOut' }}
-    >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <button
-          className="interactive group flex items-center gap-3"
-          onClick={() => handleNavClick('home')}
-          aria-label="Go to home"
-        >
-          <span className="grid h-10 w-10 place-items-center rounded-xl border border-cyan-300/30 bg-cyan-300/10 font-mono text-sm font-black text-cyan-100 shadow-glow">
-            BA
-          </span>
-          <span className="hidden text-left sm:block">
-            <span className="block text-sm font-bold text-white">Bimun Acharya</span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.24em] text-slate-400">
-              Godawari, Lalitpur
-            </span>
-          </span>
-        </button>
+    <>
+      <button
+        className="classic-menu-button interactive lg:hidden"
+        onClick={() => setOpen((value) => !value)}
+        aria-label="Toggle navigation"
+      >
+        {open ? <Times /> : <Bars />}
+      </button>
 
-        <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 backdrop-blur-xl lg:flex">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleNavClick(item.id)}
-              className={`interactive relative rounded-full px-4 py-2 text-sm font-medium transition ${
-                activeSection === item.id ? 'text-white' : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              {activeSection === item.id ? (
-                <motion.span
-                  layoutId="activeNav"
-                  className="absolute inset-0 rounded-full bg-cyan-300/10 shadow-glow"
-                  transition={{ type: 'spring', stiffness: 420, damping: 32 }}
-                />
-              ) : null}
-              <span className="relative z-10">{item.label}</span>
-            </button>
-          ))}
+      <motion.aside
+        className={`classic-sidebar ${open ? 'is-open' : ''}`}
+        initial={{ x: -320, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.65, ease: 'easeOut' }}
+      >
+        <div className="classic-sidebar-inner">
+          <button
+            className="interactive mx-auto block"
+            onClick={() => handleNavClick('home')}
+            aria-label="Go to home"
+          >
+            <img
+              src={avatarSources[avatarIndex]}
+              alt="Bimun Acharya"
+              className="classic-avatar"
+              onError={() => {
+                setAvatarIndex((index) => Math.min(index + 1, avatarSources.length - 1));
+              }}
+            />
+          </button>
+
+          <h1 className="classic-sidebar-name mt-4 text-center text-2xl font-black">Bimun Acharya</h1>
+          <p className="classic-sidebar-role mt-2 text-center text-sm">IT Graduate</p>
+
+          <div className="mt-5 flex justify-center gap-2">
+            {socials.map((social) => {
+              const Icon = Icons[social.icon];
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="classic-social interactive"
+                  aria-label={social.label}
+                  title={social.label}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
+
+          <a href={cvUrl} download="Bimun-Acharya-CV.pdf" className="classic-cv-button interactive">
+            <Download />
+            Download CV
+          </a>
+
+          <nav className="mt-8 space-y-1" aria-label="Main navigation">
+            {navItems.map((item) => {
+              const Icon = navIcons[item.id] || Icons.code;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
+                  className={`classic-nav-link interactive ${
+                    activeSection === item.id ? 'is-active' : ''
+                  }`}
+                >
+                  <Icon />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </nav>
         </div>
+      </motion.aside>
 
-        <button
-          className="interactive grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/[0.05] text-white lg:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label="Toggle navigation"
-        >
-          {open ? <Times /> : <Bars />}
-        </button>
-      </nav>
-
-      {open ? (
-        <motion.div
-          className="mx-4 mb-4 rounded-2xl border border-white/10 bg-night/95 p-2 shadow-card backdrop-blur-2xl lg:hidden"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-        >
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleNavClick(item.id)}
-              className={`block w-full rounded-xl px-4 py-3 text-left text-sm font-semibold ${
-                activeSection === item.id ? 'bg-cyan-300/10 text-cyan-100' : 'text-slate-300'
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </motion.div>
-      ) : null}
-    </motion.header>
+      {open ? <button className="classic-backdrop lg:hidden" onClick={() => setOpen(false)} aria-label="Close menu" /> : null}
+    </>
   );
 }

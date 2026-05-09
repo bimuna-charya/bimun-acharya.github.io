@@ -43,6 +43,12 @@ const initialForm = {
   message: '',
 };
 
+const statusMessages = {
+  sent: 'Message sent. I will receive it in Gmail.',
+  mailto: 'Your email app opened. Please press Send there.',
+  error: 'Something went wrong. Please try Gmail directly.',
+};
+
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState('idle');
@@ -69,7 +75,12 @@ export default function Contact() {
         const response = await fetch(formspreeEndpoint, {
           method: 'POST',
           headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-          body: JSON.stringify(form),
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            message: form.message,
+            source: 'Bimun Acharya Portfolio',
+          }),
         });
 
         if (!response.ok) throw new Error('Formspree request failed');
@@ -79,6 +90,8 @@ export default function Contact() {
         const subject = encodeURIComponent(`Portfolio inquiry from ${form.name}`);
         const body = encodeURIComponent(`${form.message}\n\nFrom: ${form.name} <${form.email}>`);
         window.open(`mailto:${fallbackEmail}?subject=${subject}&body=${body}`, '_blank', 'noreferrer');
+        setStatus('mailto');
+        return;
       }
 
       setStatus('sent');
@@ -186,8 +199,7 @@ export default function Contact() {
                 {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
               <p className="min-h-[24px] text-sm text-slate-400">
-                {status === 'sent' ? 'Thanks, your message is ready.' : null}
-                {status === 'error' ? 'Something went wrong. Please try email directly.' : null}
+                {statusMessages[status] || null}
               </p>
             </div>
           </motion.form>

@@ -190,6 +190,7 @@ export const location = 'Godawari, Lalitpur, Nepal';
 export const cvUrl = '/Bimun-Acharya-CV.pdf';
 export const cvHtmlUrl = '/Bimun-Acharya-CV.html';
 export const profileImage = '/assets/profile-bimun.jpg';
+export const sidebarImage = '/assets/profile-graduation.jpg';
 
 export const socials = [
   {

@@ -174,6 +174,39 @@ The included `vercel.json` handles app rewrites.
 
 The form works without paid services. If no provider is configured, it opens Gmail/mail through `mailto`.
 
+Recommended free setup: Formspree.
+
+### Formspree Setup For GitHub Pages
+
+1. Go to `https://formspree.io`.
+2. Sign up with `bimunacharya9@gmail.com`.
+3. Create a new form.
+4. Copy your endpoint. It will look like:
+
+```text
+https://formspree.io/f/your_id
+```
+
+5. Open your GitHub repository.
+6. Go to `Settings > Secrets and variables > Actions`.
+7. Click `New repository secret`.
+8. Add this secret:
+
+```text
+Name: VITE_FORMSPREE_ENDPOINT
+Value: https://formspree.io/f/your_id
+```
+
+9. Push the website again:
+
+```bash
+git add .
+git commit -m "Connect contact form"
+git push
+```
+
+After deployment, messages from the contact form will go to your Gmail and will also appear in your Formspree dashboard.
+
 Optional EmailJS setup:
 
 ```env
@@ -189,6 +222,8 @@ Optional Formspree setup:
 VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your_id
 VITE_CONTACT_EMAIL=bimunacharya9@gmail.com
 ```
+
+For local testing, create a `.env` file using the same values. Do not commit `.env`.
 
 ## Updating Later
 

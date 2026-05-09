@@ -1,9 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import BackgroundFX from './components/BackgroundFX.jsx';
 import BackToTop from './components/BackToTop.jsx';
-import CursorGlow from './components/CursorGlow.jsx';
-import FloatingSocialSidebar from './components/FloatingSocialSidebar.jsx';
 import Hero from './components/Hero.jsx';
 import LoadingScreen from './components/LoadingScreen.jsx';
 import Navbar from './components/Navbar.jsx';
@@ -46,13 +43,11 @@ export default function App() {
 
   return (
     <>
-      <BackgroundFX />
-      <CursorGlow />
       <ScrollProgress />
-      <FloatingSocialSidebar />
       <AnimatePresence>{loading ? <LoadingScreen /> : null}</AnimatePresence>
       <Navbar activeSection={activeSection} />
       <motion.main
+        className="classic-main"
         initial={{ opacity: 0 }}
         animate={{ opacity: loading ? 0 : 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}

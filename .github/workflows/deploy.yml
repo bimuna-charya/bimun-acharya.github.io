@@ -33,6 +33,9 @@ jobs:
 
       - name: Lint and build
         run: npm run deploy:check
+        env:
+          VITE_FORMSPREE_ENDPOINT: ${{ secrets.VITE_FORMSPREE_ENDPOINT }}
+          VITE_CONTACT_EMAIL: bimunacharya9@gmail.com
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
