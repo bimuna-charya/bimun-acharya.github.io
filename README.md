@@ -275,10 +275,16 @@ public/404.html
 public/site.webmanifest
 ```
 
-Profile image path:
+Sidebar profile image path:
 
 ```text
-public/assets/profile-bimun.jpg
+public/assets/profile-graduation.jpg
 ```
 
-For best loading speed, resize the profile image to around `1200px` wide before saving it there.
+Hero profile image path:
+
+```text
+public/assets/profile-hero.jpg
+```
+
+For best loading speed, resize profile images to around `1200px` wide before saving them there.

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { cvUrl, profileImage, roles, socials } from '../data/portfolio';
+import { cvUrl, heroProfileImage, sidebarProfileImage, roles, socials } from '../data/portfolio';
 import { useTypingText } from '../hooks/useTypingText';
 import { Icons } from '../utils/icons.jsx';
 
@@ -99,10 +99,20 @@ export default function Hero() {
           transition={{ duration: 0.75, delay: 0.42, ease: 'easeOut' }}
         >
           <img
-            src={profileImage}
+            src={heroProfileImage}
             alt="Bimun Acharya"
+            data-fallback="hero"
             onError={(event) => {
-              event.currentTarget.src = '/assets/holographic-profile.svg';
+              const image = event.currentTarget;
+
+              if (image.dataset.fallback === 'hero') {
+                image.dataset.fallback = 'sidebar';
+                image.src = sidebarProfileImage;
+                return;
+              }
+
+              image.dataset.fallback = 'placeholder';
+              image.src = '/assets/holographic-profile.svg';
             }}
           />
         </motion.div>

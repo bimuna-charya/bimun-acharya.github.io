@@ -1,21 +1,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { cvUrl, navItems, profileImage, sidebarImage, socials } from '../data/portfolio';
+import { cvUrl, navItems, sidebarProfileImage, socials } from '../data/portfolio';
 import { Icons } from '../utils/icons.jsx';
 
 const Bars = Icons.bars;
 const Times = Icons.times;
 const Download = Icons.download;
-const avatarSources = [
-  sidebarImage,
-  '/assets/profile-graduation.jpeg',
-  '/assets/profile-graduation.png',
-  '/assets/profile-graduation.webp',
-  profileImage,
-  '/assets/profile-bimun.jpeg',
-  '/assets/profile-bimun.png',
-  '/assets/holographic-profile.svg',
-];
 
 const navIcons = {
   home: Icons.rocket,
@@ -29,7 +19,6 @@ const navIcons = {
 
 export default function Navbar({ activeSection }) {
   const [open, setOpen] = useState(false);
-  const [avatarIndex, setAvatarIndex] = useState(0);
 
   function handleNavClick(id) {
     setOpen(false);
@@ -59,11 +48,11 @@ export default function Navbar({ activeSection }) {
             aria-label="Go to home"
           >
             <img
-              src={avatarSources[avatarIndex]}
+              src={sidebarProfileImage}
               alt="Bimun Acharya"
               className="classic-avatar"
-              onError={() => {
-                setAvatarIndex((index) => Math.min(index + 1, avatarSources.length - 1));
+              onError={(event) => {
+                event.currentTarget.src = '/assets/holographic-profile.svg';
               }}
             />
           </button>

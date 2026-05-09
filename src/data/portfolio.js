@@ -189,8 +189,9 @@ export const phoneNumber = '977-9843023149';
 export const location = 'Godawari, Lalitpur, Nepal';
 export const cvUrl = '/Bimun-Acharya-CV.pdf';
 export const cvHtmlUrl = '/Bimun-Acharya-CV.html';
-export const profileImage = '/assets/profile-bimun.jpg';
-export const sidebarImage = '/assets/profile-graduation.jpg';
+export const sidebarProfileImage = '/assets/profile-graduation.jpg';
+export const heroProfileImage = '/assets/profile-hero.jpg';
+export const profileImage = sidebarProfileImage;
 
 export const socials = [
   {

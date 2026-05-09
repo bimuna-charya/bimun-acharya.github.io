@@ -1,17 +1,11 @@
-Save the uploaded Tserko Ri profile photo as:
-
-public/assets/profile-bimun.jpg
-
-The Hero profile section is already wired to use this file.
-
 Save the uploaded graduation profile photo as:
 
 public/assets/profile-graduation.jpg
 
 The sidebar profile photo above "Bimun Acharya" is wired to use this file.
 
-Accepted backup filenames:
+Save the different large Hero photo as:
 
-public/assets/profile-graduation.jpeg
-public/assets/profile-graduation.png
-public/assets/profile-graduation.webp
+public/assets/profile-hero.jpg
+
+The big Hero photo card is wired to use this file first, then fallback to the sidebar photo if it is missing.
